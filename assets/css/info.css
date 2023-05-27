@@ -1,0 +1,29 @@
+main {
+    text-align: center;
+    height: 1100px;
+  }
+  
+  .contact-cart {
+    max-width: 900px;
+  }
+  
+  .contact {
+    font-size: 18px;
+  }
+  
+  .map-img {
+    width: 40%;
+  }
+  
+  .zagalovok-main {
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+  }
+ .main-gorod {
+    max-width: 1000px;
+    width: 26px;
+    border: 1px solid #000;
+    margin-top: -1100px;
+    margin-right: 500px;
+ }  

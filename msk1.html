@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Подключение сброса стилей -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="assets/job-css/msk1.css" />
+    <title>Вакансия</title>
+    <link rel="shortcut icon" href="assets/images/vkladka.png" type="image/png">
+  </head>
+  <body>
+    
+    <!-- Контейнер выравнивает по ширине и по центру -->
+    <div class="container">
+
+      <!-- content содержит содержимое формы -->
+      <div class="content">
+
+        <!-- Левая колонка: адрес, телефоны, email. Можете добавить свое -->
+        <div class="left-side">
+          <div class="address details">
+
+            <!-- Вместо классов: название шрифтовых иконок (fontawesome.com) -->
+            <i class="fas fa-map-marker-alt"></i>
+
+            <!-- topic - заголовок, text-one, text-two - текст -->
+            <div class="topic">Вы сделали правильный выбор</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Заполните форму</div>
+            <div class="text-one">Ожидайте звонок или</div>
+            <div class="text-two">Ожидайте письмо на свою почту</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic"></div>
+            <div class="text-one">gazprom@gazprom.ru</div>
+            <div class="text-two">webmaster@gazprom.ru</div>
+          </div>
+        </div>
+
+        <!-- Правая колонка: сама форма -->
+        <div class="right-side">
+
+          <!-- Заголовок для формы -->
+          <div class="topic-text">Отправьте нам свои данные</div>
+
+          <!-- Какой-то дополнительный текст -->
+          <p>
+            Если у вас есть какие-то вопросы или предложения по сотрудничеству -
+            заполните форму ниже
+          </p>
+
+          <!-- Форма обратной связи -->
+          <form action="#">
+
+            <!-- Каждый input для выравнивания вкладываем в блок input-box -->
+            <div class="input-box">
+              <input type="text" placeholder="Ваше ФИО" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Введите email" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Введите телефон" />
+            </div>
+            <div class="input-box message-box">
+              <textarea placeholder="Сообщение"></textarea>
+            </div>
+            <div class="button">
+              <input type="button" value="Отправить" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Подключение шрифтовых иконок, можно получить на fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/fce9a50d02.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html

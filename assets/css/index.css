@@ -1,0 +1,63 @@
+div#slider {
+    position: relative;
+    padding: 10px 5px;
+    overflow: hidden;
+    margin: auto;
+    max-width: 1110px;
+  }
+  
+  div#slider div.slides {
+    position: relative;
+    display: flex;
+    transition: 0.4s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  
+  div#slider div.slides div.slide {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 0;
+    margin: 10px;
+    padding: 20px;
+    -webkit-box-shadow: 1px -1px 8px 0px rgba(34, 60, 80, 0.47);
+    -moz-box-shadow: 1px -1px 8px 0px rgba(34, 60, 80, 0.47);
+    box-shadow: 1px -1px 8px 0px rgba(34, 60, 80, 0.47);
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(90deg,#070063,#3ea2ff);
+  }
+  
+  div.slide img {
+    margin-bottom: 10px;
+  }
+  
+  div.col img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .menu_slk {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*Main*/
+  main {
+    width: 100%;
+    height: 1100px;
+  }
+  
+  .zagalovok-main {
+    text-align: center;
+    color: azure;
+    font-size: 32px;
+  }
+.button-vak {
+   position: relative;
+left: 50%;
+transform: translate(-50%, 0);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вакансии Gazprom</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="shortcut icon" href="assets/images/vkladka.png" type="image/png">
+</head>
+
+<body>
+  <div class="slider-thumb"></div>
+  <header>
+    <img class="logo-menu" src="assets/images/logo.png" />
+      <p class="name-site">Вакансии Газпрома</p>
+    </a>
+    <nav>
+      <a class="li" href="priveleg.html">Привилегии</a>
+      <a class="li" href="info.html">Города</a>
+      <? include('./components/header.php') ?>
+    </nav>
+  </header>
+  <main>
+    <p class="zagalovok-main">Газпром - мечты сбываются</p>
+    <div id="slider">
+      <div class="slides">
+        <div class="slide col">
+          <img src="assets/images/1vak.jpg" alt="" />
+          <h3><a class="menu_slk" href="#">Инженер – электрик (электроэнергетик)</a></h3>
+        </div>
+        <div class="slide col">
+          <img src="assets/images/2vak.jpg" alt="" />
+          <h3><a class="menu_slk" href="#">Ведущий специалист по охране труда</a></h3>
+        </div>
+        <div class="slide col">
+          <img src="assets/images/3vak.jpg" alt="" />
+          <h3><a class="menu_slk" href="#">Инженер электросвязи</a></h3>
+        </div>
+        <div class="slide col">
+          <img src="assets/images/4vak.jpg" alt="" />
+          <h3><a class="menu_slk" href="#">Ведущий инженер</a></h3>
+        </div>
+        <div class="slide col">
+          <img src="assets/images/5vak.jpg" alt="" />
+          <h3><a class="menu_slk" href="#">Начальник службы строительного контроля</a></h3>
+        </div>
+      </div>
+    </div>
+    <div class="button-vak"></div>
+    <button class="button-vak" onclick="window.location.href='vak.html'">Все вакансии</button>
+  </main>
+  <footer>
+    <p class="text-footer">Подбери вакансию для себя!</p>
+  </footer>
+</body>
+<script src="assets/js/slider.js"></script>
+
+
+
+</html>

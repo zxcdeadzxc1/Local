@@ -1,0 +1,96 @@
+main {
+    width: 100%;
+    height: 3300px;
+  }
+  
+  .zagalovok-main {
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-family: arial;
+    font-weight: bold;
+  }
+  
+  div.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  div.message {
+    font-size: 20pt;
+    color: gray;
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  div.head {
+    font-size: 32px;
+    font-weight: 550;
+    font-family: OpenSans;
+  
+    margin-top: 2%;
+    text-align: center;
+  }
+  
+  div.wrap {
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  div.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  div.row.at {
+    align-items: flex-start;
+  }
+  
+  div.col {
+    width: 32%;
+    padding: 20px;
+    transition: 0.2s;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgb(75, 168, 255);
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  div.col img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 6%;
+    font-family: arial;
+    font-weight: bold;
+  }
+  

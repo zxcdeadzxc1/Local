@@ -1,0 +1,435 @@
+:root {
+    --black: #000000;
+    --white: #fff;
+    --green: #49b293;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  body {
+    margin: 50px 0;
+    color: var(--black);
+    font: 1rem/1.3 sans-serif;
+  }
+  
+  .author-archive {
+    padding: 1.5rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 a {
+    transition: all 0.1s;
+  }
+  
+  h1 a:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  
+  /* FILTERS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .filters {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filters * {
+    display: inline-block;
+  }
+  
+  .filters label {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  .filters label:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  
+  /* FILTERED ELEMENTS (POSTS)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .posts {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .posts .post {
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .posts .post-title {
+    font-size: 1.3rem;
+  }
+  
+  .posts .post-title:hover {
+    text-decoration: underline;
+  }
+  
+  .posts figcaption {
+    padding: 1rem;
+  }
+  
+  .posts .post-categories {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .posts .post-categories * {
+    display: inline-block;
+  }
+  
+  .posts .post-categories li {
+    margin-bottom: 0.2rem;
+  }
+  
+  .posts .post-categories a {
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.1s;
+  }
+  
+  .posts .post-categories a:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  
+  /* FILTERING RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  [value="All"]:checked ~ .filters [for="All"],
+  [value="CSS"]:checked ~ .filters [for="CSS"],
+  [value="JavaScript"]:checked ~ .filters [for="JavaScript"],
+  [value="jQuery"]:checked ~ .filters [for="jQuery"],
+  [value="WordPress"]:checked ~ .filters [for="WordPress"],
+  [value="Slider"]:checked ~ .filters [for="Slider"],
+  [value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  [value="All"]:checked ~ .posts [data-category] {
+    display: block;
+  }
+  
+  [value="CSS"]:checked ~ .posts .post:not([data-category~="CSS"]),
+  [value="JavaScript"]:checked ~ .posts .post:not([data-category~="JavaScript"]),
+  [value="jQuery"]:checked ~ .posts .post:not([data-category~="jQuery"]),
+  [value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
+  [value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
+  [value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
+    display: none;
+  }
+  
+  
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  footer {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+  
+  footer span {
+    color: #e31b23;
+  }
+  
+  
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 900px) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    html {
+      font-size: 14px;
+    }
+  
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+#myBtn {
+  background-color: #000000;
+  color: white;
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 180px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    border: 5px solid #ffffff;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #fcfcfc;
+    color: rgb(155, 40, 40); 
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #000000;
+    color: white;
+}
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+.css-modal-details {
+  height: 60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Кнопка для открытия */
+.css-modal-details summary {
+  display: inline-flex;
+  margin: 10px;
+  text-decoration: none;
+  position: relative;
+  font-size: 10px;
+  line-height: 20px;
+  padding: 12px 30px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', Тahoma, sans-serif;
+  background: #337AB7;
+  cursor: pointer;
+  border: 2px solid #BFE2FF;
+  overflow: hidden;
+  z-index: 1;    
+}
+.css-modal-details summary:hover,
+.css-modal-details summary:active,
+.css-modal-details summary:focus {
+  color: #FFF;
+}
+.css-modal-details summary:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -50px;
+  bottom: 0;
+  left: 0;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #2D6B9F;
+  transition: transform 0.5s;
+  transform: translateX(-100%);
+  z-index: -1;
+}
+.css-modal-details summary:hover:before,
+.css-modal-details summary:active:before,
+.css-modal-details summary:focus:before {
+  transform: translateX(0);
+}
+
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary {
+  cursor: default;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc {
+  display:flex;
+  align-items:center;
+  justify-content:center;    
+}
+.css-modal-details details[open] .cmc {
+  pointer-events: none;
+  z-index: 4;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: bg 0.5s ease;
+  background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+.css-modal-details details .cmt {
+  font-family: Verdana, sans-serif;  
+  font-size: 16px;
+  padding: 20px;
+  width:80%;
+  max-width: 600px;
+  max-height: 70%;
+  transition: 0.5s;
+  border: 6px solid #BFE2FF;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  overflow: auto;
+}
+.css-modal-details details[open] .cmt {
+  animation: scale 0.5s ease;
+  z-index: 4;
+  pointer-events: auto;
+}
+
+/* Декоративная кнопка с крестиком */
+.css-modal-details details[open] .cmc:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 6px solid #BFE2FF;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+  background-color: #FFF;
+  background-size: cover;
+  animation: move 0.5s ease;
+}
+
+/* Анимации */
+@keyframes scale {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+@keyframes move {
+  0% {
+      right: -80px;
+  }
+  100% {
+      right: 20px;
+  }
+}
+@keyframes bg {
+  0% {
+      background: rgba(51, 122, 183, 0);
+  }
+  100% {
+      background: rgba(51, 122, 183, 0.7);
+  }
+}
+.butonckik {
+  color: black;
+  font-weight: 30;
+  text-decoration: 10px;
+  user-select: none;
+  border-radius: 2px;
+  transition: 0.3s;
+  font-size: 12px;
+  flex: auto;
+}
